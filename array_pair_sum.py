@@ -14,4 +14,13 @@ class Solution:
             else:
                 pairs+=1
         return pairs
-    
+   
+    def pair_sum2(arr:list, n:int) -> tuple: 
+        target = {}
+        for i in arr:
+            try:
+                target[i]+=1
+                return True 
+            except:
+                target[n-i]=0
+        return False 
